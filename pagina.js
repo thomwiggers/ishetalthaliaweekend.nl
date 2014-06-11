@@ -15,11 +15,11 @@ function telaf() {
   $("#minuten").html(minuten);
   $("#seconden").html(seconden);
 
-  if(dagen < 0) { 
+  if(dagen < 0 && dagen > -5) { 
     $(".lead").html("<span class=\"text-success\">JA!</span>");
     $("#countdown").toggle();
     return;
-  }
+  } 
 
   setTimeout(telaf, 1000);
 }
